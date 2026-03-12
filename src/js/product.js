@@ -3,7 +3,6 @@ import { getParam } from "./utils.mjs";
 import ProductDetails from "./ProductDetails.mjs";
 
 
-console.log("product.js loaded.");
 const dataSource = new ProductData("tents");
 const productID = getParam('product');
 
@@ -17,7 +16,3 @@ async function addToCartHandler(e) {
   addProductToCart(product);
 }
 
-// add listener to Add to Cart button
-// document
-//   .getElementById("addToCart")
-//   .addEventListener("click", addToCartHandler);

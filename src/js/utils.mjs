@@ -30,3 +30,12 @@ export function getParam(param) {
   return product; 
 }
 
+//create renderList template function
+
+export async function renderListWithTemplate(templateFn, parentElement, list, position, clear = false) {
+  if (clear) {
+    parentElement.innerHTML.clear(); 
+  }
+  const productsHTML = list.map((item) => templateFn(item)); 
+   parentElement.insertAdjacentHTML(position, productsHTML.join('')); 
+}
