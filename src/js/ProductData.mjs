@@ -2,7 +2,7 @@ function convertToJson(res) {
   if (res.ok) {
     return res.json();
   } else {
-    throw new Error('Bad Response');
+    throw new Error("Bad Response");
   }
 }
 
@@ -18,8 +18,6 @@ export default class ProductData {
   }
   async findProductById(id) {
     const products = await this.getData();
-    let product = products.find((item) => item.Id === id);
-    return product; 
+    return products.find((item) => item.Id === id);
   }
 }
-
